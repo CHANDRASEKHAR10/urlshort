@@ -1,0 +1,9 @@
+<html>
+<body>
+<h1>{{request.user}}'s Blog</h1>
+{% for b in blog %}
+<a href="{% url 'blogdetail' b.id %}">{{b.title}}</a></br>
+{{b.content}}</br>
+{% endfor %}
+</body>
+</html>

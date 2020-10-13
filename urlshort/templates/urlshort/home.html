@@ -1,0 +1,9 @@
+<html>
+<body>
+<h1>Welcome {{request.user}}</h1>
+<a href = {% url 'logout' %}>Logout</a>
+<h1>Create a Blog</h1>
+<a href={% url 'createblog' %}>Create Blog</a>
+<a href = {%url 'myblog' %}>My Blog</a>
+</body>
+</html>

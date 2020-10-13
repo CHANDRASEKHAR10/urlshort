@@ -1,0 +1,10 @@
+<html>
+<body>
+<h1>Create Comment</h1>
+<form method='POST' action=''>
+{% csrf_token %}
+{{form.as_p}}
+<input type='submit' name="Submit">
+</form>
+</body>
+</html>

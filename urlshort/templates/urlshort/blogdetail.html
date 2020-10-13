@@ -1,0 +1,14 @@
+<html>
+<body>
+<b>{{post.title}}</b></br>
+{{post.content}}</br>
+<h1>Comments for this blog</h1>
+{% for c in comm %}
+{{c.comment}}</br>
+<a href="{% url 'createreply' c.id %}">Reply</a>
+<a href="{% url 'sendreply' c.id %}">View Reply</a></br>
+{% include 'urlshort/sendreply.html' %}
+{% endfor %}
+<a href="{% url 'createcomments' post.id %}">Create comments</a>
+</body>
+</html>
